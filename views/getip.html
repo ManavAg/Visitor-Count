@@ -1,0 +1,120 @@
+<script src="/public/jquery.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.12.0/jquery.validate.min.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.12.0/jquery.validate.min.js"></script>
+<link rel="stylesheet" href="/public/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="/public/bootstrap/css/bootstrap-theme.min.css">
+<script src="/public/bootstrap/js/bootstrap.min.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-50081332-1', 'manavagarwal.net');
+  ga('send', 'pageview');
+var Submitted;
+$( document ).ready(function() {
+	$("#dbform").validate();
+  Submitted = $("#Submitted").html();
+  if (Submitted==1){
+	alert("Thank you for your feedback!");
+	}
+});	
+</script>
+<script>
+!function(d,s,id)
+	{
+	var js,
+		fjs=d.getElementsByTagName(s)[0],
+		p=/^http:/.test(d.location)?'http':'https';
+	if(!d.getElementById(id))
+		{
+		js=d.createElement(s);
+		js.id=id;
+		js.src=p+'://platform.twitter.com/widgets.js';
+		fjs.parentNode.insertBefore(js,fjs);
+		}
+	}(document, 'script', 'twitter-wjs');
+</script>
+<style>
+.counter-number {
+	width:60px;
+	background-color:black;
+	color:white;
+	float:left;
+	text-align:center;
+	display:inline;
+}
+#dbform{
+	position:absolute;
+	margin:20% 20% 40% 20%;
+}
+input, textarea{
+	margin-top:10px;
+	background-color:blue;
+}
+button{
+	margin-top:10px;
+	margin-left:35%;
+}
+body{
+	margin:0 0 0 0;
+	background-color:rgb(150,150,255);
+	height:100%;
+}
+#fbiframe
+{
+margin-top:10%;
+transform: scale(2.5);
+-ms-transform: scale(2.5); 
+-webkit-transform: scale(2.5); 
+-o-transform: scale(2.5); 
+-moz-transform: scale(2.5); 
+transform-origin: top left;
+-ms-transform-origin: top left;
+-webkit-transform-origin: top left;
+-moz-transform-origin: top left;
+-webkit-transform-origin: top left;
+}
+#twitter-widget-0
+{
+margin-top:10%;
+transform: scale(2);
+-ms-transform: scale(2.5); 
+-webkit-transform: scale(2.5); 
+-o-transform: scale(2.5); 
+-moz-transform: scale(2.5); 
+transform-origin: top left;
+-ms-transform-origin: top left;
+-webkit-transform-origin: top left;
+-moz-transform-origin: top left;
+-webkit-transform-origin: top left;
+}
+</style>
+<html>
+	<body>
+		<div style="position:fixed;">
+		<div class="counter-number"><%= Count %></div><br>
+		</div>
+		<form method="post" class="cmxform" id="dbform">
+			<div class="container-fluid">
+				<div class="row">
+					<fieldset>
+						<h1><center>Comments</h1>
+						</center>
+						<input class="form-control" type="text" placeholder="Name" name = "Name" size='100' minlength="2" type="text" required/>
+						<input class="form-control" placeholder="Email" name = "Email" size='100' type="email" required/>
+						<textarea class="form-control" rows="3" placeholder="Message" name = "Message"></textarea>
+						<button style="width:30%" type="submit" class="btn btn-lg btn-primary">Send</button>
+					</fieldset>
+				</div>
+			</div>
+		</form>
+		<div id="Submitted" hidden><%= Submitted %></div>
+		<div style="position:fixed;padding:0px;top:5px;">
+		<iframe id = "fbiframe" src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.manavagarwal.net&amp;layout=button&amp;share=true&amp;show_faces=true&amp;width=450&amp;action=like&amp;colorscheme=light&amp;height=20" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100%; height:20px;display:relative;" allowTransparency="false"></iframe>
+		<a style="display:block; position:relative" href="https://twitter.com/share" class="twitter-share-button" data-url= "http://www.manavagarwal.net" data-text="Checking out this WebCV" data-via="manav__agarwal" data-related="manav__agarwal" data-hashtags="WebCV">Tweet</a>
+		</div>
+	
+	</body>
+</html>

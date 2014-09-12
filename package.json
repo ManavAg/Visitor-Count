@@ -1,0 +1,30 @@
+{
+  "name": "VisitorStats",
+  "subdomain": "ManavAgarwal1-VisitorStats",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "version": "0.0.0-15",
+  "engines": {
+    "node": "0.10.x"
+  },
+  "dependencies": {
+    "express": "*",
+    "mongodb": "*",
+    "ejs": "*",
+    "express-useragent": "^0.1.0",
+    "platform": "^1.0.0",
+    "connect": "^2.14.5",
+    "nodemailer": "^0.6.3"
+  },
+  "os": "sunos",
+  "bundledDependencies": [
+    "connect",
+    "ejs",
+    "express",
+    "express-useragent",
+    "mongodb",
+    "nodemailer",
+    "platform"
+  ]
+}
